@@ -1,0 +1,3 @@
+method,euler_step_cost,normalized_time,time_seconds
+traditional,142656000,1.0,81.009448735593
+mlmc_adjoint,25745192,0.18047044638851503,14.619811375

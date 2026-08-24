@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1620" height="1320" viewBox="0 0 1620 1320" role="img" aria-labelledby="title desc">
+  <title id="title">Traditional Monte Carlo versus MLMC plus adjoint runtime</title>
+  <desc id="desc">Traditional Monte Carlo has an estimated cost-equivalent time of 81.009 seconds. MLMC plus adjoint has a measured median time of 14.620 seconds.</desc>
+  <rect width="1620" height="1320" fill="#ffffff"/>
+
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#222222">
+    <text x="810" y="78" text-anchor="middle" font-size="48" font-weight="600">Traditional MC versus MLMC + Adjoint</text>
+    <text x="810" y="125" text-anchor="middle" font-size="25" fill="#555555">Same accuracy target ε = 0.01 and finest Euler level L = 7</text>
+
+    <g stroke="#d6d6d6" stroke-width="2">
+      <line x1="210" y1="1030" x2="1510" y2="1030"/>
+      <line x1="210" y1="836.7" x2="1510" y2="836.7"/>
+      <line x1="210" y1="643.3" x2="1510" y2="643.3"/>
+      <line x1="210" y1="450.0" x2="1510" y2="450.0"/>
+      <line x1="210" y1="256.7" x2="1510" y2="256.7"/>
+    </g>
+
+    <g font-size="27" fill="#444444">
+      <text x="180" y="1039" text-anchor="end">0</text>
+      <text x="180" y="845.7" text-anchor="end">20</text>
+      <text x="180" y="652.3" text-anchor="end">40</text>
+      <text x="180" y="459.0" text-anchor="end">60</text>
+      <text x="180" y="265.7" text-anchor="end">80</text>
+    </g>
+
+    <line x1="210" y1="160" x2="210" y2="1030" stroke="#444444" stroke-width="3"/>
+    <line x1="210" y1="1030" x2="1510" y2="1030" stroke="#444444" stroke-width="3"/>
+    <text x="58" y="595" text-anchor="middle" font-size="31" transform="rotate(-90 58 595)">Time (seconds)</text>
+
+    <rect x="390" y="246.9" width="360" height="783.1" fill="#0072B2"/>
+    <rect x="970" y="888.0" width="360" height="142.0" fill="#009E73"/>
+
+    <g font-size="34" font-weight="600">
+      <text x="570" y="216" text-anchor="middle">81.009 s</text>
+      <text x="1150" y="857" text-anchor="middle">14.620 s</text>
+    </g>
+
+    <g font-size="32">
+      <text x="570" y="1098" text-anchor="middle">Traditional MC</text>
+      <text x="1150" y="1098" text-anchor="middle">MLMC + adjoint</text>
+    </g>
+
+    <path d="M750 330 C880 420, 970 640, 1075 848" fill="none" stroke="#333333" stroke-width="3"/>
+    <path d="M1059 839 L1075 848 L1073 830" fill="none" stroke="#333333" stroke-width="3"/>
+    <text x="905" y="480" text-anchor="middle" font-size="29" font-weight="600">5.54× lower time</text>
+
+    <text x="860" y="1215" text-anchor="middle" font-size="23" fill="#666666">Traditional MC is a cost-equivalent estimate; MLMC + adjoint is the measured median runtime.</text>
+  </g>
+</svg>

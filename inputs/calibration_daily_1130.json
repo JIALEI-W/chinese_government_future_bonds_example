@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "instruments": [
+    "TF",
+    "TL",
+    "T",
+    "TS"
+  ],
+  "source": "publicly observable Chinese government bond futures prices",
+  "return_definition": "log return from 11:30 on one trading day to 11:30 on the next trading day",
+  "frequency": "daily",
+  "observation_time": "11:30",
+  "includes_overnight_changes": true,
+  "trading_days_per_year": 252,
+  "common_price_days": 272,
+  "sample_start": "2023-04-24T00:00:00",
+  "sample_end": "2024-06-06T00:00:00",
+  "sample_size": 271,
+  "s0_raw_latest": {
+    "TF": 107.002,
+    "TL": 108.13000000000001,
+    "T": 118.78000000000002,
+    "TS": 105.06099999999999
+  },
+  "s0_normalized_for_mlmc": {
+    "TF": 100.0,
+    "TL": 100.0,
+    "T": 100.0,
+    "TS": 100.0
+  },
+  "sigma_annualized": {
+    "TF": 0.015352426899092591,
+    "TL": 0.04909890952693436,
+    "T": 0.01893556689233593,
+    "TS": 0.006949923708868145
+  },
+  "drift_assumption": {
+    "TF": 0.0,
+    "TL": 0.0,
+    "T": 0.0,
+    "TS": 0.0
+  },
+  "rho": [
+    [
+      1.0,
+      0.7559935956980006,
+      0.9465752017878403,
+      0.9144216677058656
+    ],
+    [
+      0.7559935956980006,
+      1.0,
+      0.8469200885752329,
+      0.6528499745887023
+    ],
+    [
+      0.9465752017878403,
+      0.8469200885752329,
+      1.0,
+      0.8459608384447707
+    ],
+    [
+      0.9144216677058656,
+      0.6528499745887023,
+      0.8459608384447707,
+      1.0
+    ]
+  ],
+  "rho_diagnostics": {
+    "symmetric": true,
+    "unit_diagonal": true,
+    "minimum_eigenvalue": 0.03268765506434391,
+    "maximum_eigenvalue": 3.488845040468333,
+    "positive_definite": true,
+    "condition_number": 106.73280275384444
+  },
+  "notes": [
+    "Each return includes all price changes between successive 11:30 observations, including overnight changes.",
+    "Drift is set to zero for the first-stage futures experiment.",
+    "The MLMC confidence interval is conditional on these calibrated parameters.",
+    "Parameter-estimation uncertainty is not included in the MLMC interval."
+  ]
+}
